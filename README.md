@@ -1,10 +1,10 @@
 # 📚 Library API (FastAPI) — Actividad de Contenedores & Virtualización
 
-Reutilizo el ejercicio de programación avanzada (**FastAPI** + **SQLAlchemy** + **Pydantic**) y lo adaptamo a la actividad de Contenedores y Virtualización.
+Reutilizo el ejercicio de programación avanzada (**FastAPI** + **SQLAlchemy** + **Pydantic**) y lo adaptO a la actividad de Contenedores y Virtualización.
 
 Para la evaluación del enunciado he elegido como entidad principal: **books (CRUD completo)**.
 
-> **Nota:** He dejado activos el resto de *routers* (authors, members, library\_books, loans) por si usted profesor desea explorar más casos. **No son necesarios para superar la actividad**, pero lo que hecho porque se que amplían el ejercicio.
+> **Nota:** He dejado activos el resto de *routers* (authors, members, library\_books, loans) por si usted profesor desea explorar más casos. **Soy consciente de que no son necesarios para superar la actividad**, pero lo que hecho porque se que amplían el ejercicio.
 
 -----
 
