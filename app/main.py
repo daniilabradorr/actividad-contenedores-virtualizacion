@@ -12,8 +12,9 @@ def health():
     return {"status": "ok"}
 
 #registro cada grupo de rutas
+#Dejo el resto activas pero la elegida para la evaluacion es books
 app.include_router(authors.router)
-app.include_router(books.router)
+app.include_router(books.router) # ENTIDAD PRINCIPAL
 app.include_router(members.router)
 app.include_router(library_books.router)
 app.include_router(loans.router)
