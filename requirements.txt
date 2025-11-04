@@ -5,3 +5,4 @@ pydantic>=2.7
 email-validator>=2.0
 requests
 httpx
+psycopg2-binary>=2.9
