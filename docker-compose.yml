@@ -1,0 +1,40 @@
+# docker-compose.yml
+version: "3.9"
+
+services:
+  biblioteca-db:
+    image: postgres:16
+    container_name: biblioteca-db
+    restart: always
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - biblioteca-postgres-data:/var/lib/postgresql/data
+    networks:
+      - biblioteca-net
+
+  biblioteca-api:
+    build: .
+    container_name: biblioteca-api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - biblioteca-db
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+    networks:
+      - biblioteca-net
+
+volumes:
+  biblioteca-postgres-data:
+    name: biblioteca-postgres-data
+
+networks:
+  biblioteca-net:
+    name: biblioteca-net
